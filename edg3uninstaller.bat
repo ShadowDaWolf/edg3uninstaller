@@ -34,6 +34,14 @@ if %yesorno%=n echo Process cancelled.
 if %yesorno%=y echo Disabling and uninstalling Edg3.
 if %yesorno%=y takeown /f C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe
 if %yesorno%=y takeown /f C:\Program Files (x86)\Microsoft\Edge\Application
+if %yesorno%=y takeown /f C:\Program Files (x86)\Microsoft\EdgeCore
+if %yesorno%=y takeown /f C:\Program Files (x86)\Microsoft\EdgeUpdate
+if %yesorno%=y takeown /f C:\Program Files (x86)\Microsoft\EdgeWebView
+if %yesorno%=y cd C:\Program Files (x86)\Microsoft\
+if %yesorno%=y del C:\Program Files (x86)\Microsoft\EdgeCore
+if %yesorno%=y del C:\Program Files (x86)\Microsoft\EdgeUpdate
+if %yesorno%=y del C:\Program Files (x86)\Microsoft\EdgeWebView
 if %yesorno%=y cd C:\Program Files (x86)\Microsoft\Edge\Application
 if %yesorno%=y del msedge.exe
 if %yesorno%=y del C:\Program Files (x86)\Microsoft\Edge\Application
+pause
